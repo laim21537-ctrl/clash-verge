@@ -7,14 +7,6 @@ ipv6: true
 external-controller: ''
 secret: set-your-secret
 unified-delay: true
-tun:
-  enable: false
-  stack: gvisor
-  auto-route: true
-  strict-route: false
-  auto-detect-interface: true
-  dns-hijack:
-  - any:53
 external-controller-cors:
   allow-private-network: true
   allow-origins:
@@ -23,11 +15,10 @@ external-controller-cors:
   - https://yacd.metacubex.one
   - https://metacubex.github.io
   - https://board.zash.run.place
+external-controller-pipe: \\.\pipe\verge-mihomo
 profile:
   store-selected: true
-hosts: null
 tcp-concurrent: true
-external-controller-pipe: \\.\pipe\verge-mihomo
 dns:
   enable: true
   ipv6: true
@@ -120,6 +111,15 @@ dns:
   - www.bilibili.com
   - api.bilibili.com
   - a.w.bilicdn1.com
+tun:
+  enable: false
+  stack: gvisor
+  auto-route: true
+  strict-route: false
+  auto-detect-interface: true
+  dns-hijack:
+  - any:53
+hosts: null
 proxies:
 - name: 生活
   type: vless
@@ -680,4 +680,3 @@ rules:
 - DOMAIN-SUFFIX,xmr.cool,🛑 Block
 - DOMAIN-SUFFIX,zymerget.win,🛑 Block
 - MATCH,🐟 漏网之鱼
-
